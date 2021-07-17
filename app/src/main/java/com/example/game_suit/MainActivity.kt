@@ -14,19 +14,18 @@ import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity(), Background, Alerts {
 
-    private lateinit var imgRock: ImageView
-    private lateinit var imgPaper: ImageView
-    private lateinit var imgScissor: ImageView
+    private val imgRock by lazy { findViewById<ImageView>(R.id.imgRock) }
+    private val imgPaper by lazy { findViewById<ImageView>(R.id.imgPaper) }
+    private val imgScissor by lazy { findViewById<ImageView>(R.id.imgScissor) }
 
     private var choiceSelected: Boolean = false
-    private lateinit var tvVersus: TextView
+    private val tvVersus by lazy { findViewById<TextView>(R.id.tvVersus) }
 
-    private lateinit var imgComRock: ImageView
-    private lateinit var imgComPaper: ImageView
-    private lateinit var imgComScissor: ImageView
+    private val imgComRock by lazy { findViewById<ImageView>(R.id.imgComRock) }
+    private val imgComPaper by lazy { findViewById<ImageView>(R.id.imgComPaper) }
+    private val imgComScissor by lazy { findViewById<ImageView>(R.id.imgComScissor) }
 
-    private lateinit var imgRefresh: ImageView
-
+    private val imgRefresh by lazy { findViewById<ImageView>(R.id.imgRefresh) }
     val logic = LogicGame(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,45 +37,20 @@ class MainActivity : AppCompatActivity(), Background, Alerts {
         actionBar?.hide()
         setContentView(R.layout.activity_main)
 
-        imgRock = findViewById(R.id.imgRock)
-        imgPaper = findViewById(R.id.imgPaper)
-        imgScissor = findViewById(R.id.imgScissor)
+        var dataView = arrayListOf<ImageView>(imgRock, imgPaper, imgScissor, imgRefresh)
 
-        imgRefresh = findViewById(R.id.imgRefresh)
-        tvVersus = findViewById(R.id.tvVersus)
-
-        imgComRock = findViewById(R.id.imgComRock)
-        imgComPaper = findViewById(R.id.imgComPaper)
-        imgComScissor = findViewById(R.id.imgComScissor)
-
-
-        imgRock.setOnClickListener {
-            if (!choiceSelected) {
-                logic.startGame(this, imgRock, "batu")
-                choiceSelected = true
+        dataView.forEach { img ->
+            img.setOnClickListener {
+                if (img.tag == "imgRefresh" && choiceSelected) {
+                    choiceSelected = false
+                    logic.resetGame(this)
+                } else if (!choiceSelected) {
+                    logic.startGame(this, img, img.contentDescription.toString())
+                    choiceSelected = true
+                }
             }
-        }
-
-        imgPaper.setOnClickListener {
-            if (!choiceSelected) {
-                logic.startGame(this, imgPaper, "kertas")
-                choiceSelected = true
-            }
-        }
-
-        imgScissor.setOnClickListener {
-            if (!choiceSelected) {
-                logic.startGame(this, imgScissor, "gunting")
-                choiceSelected = true
-            }
-        }
-
-        imgRefresh.setOnClickListener {
-            choiceSelected = false
-            logic.resetGame(this)
         }
     }
-
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun resultBackground(player: ImageView?, com: String?, color: ColorStateList?) {
@@ -93,7 +67,6 @@ class MainActivity : AppCompatActivity(), Background, Alerts {
     override fun showAlertMessages(text: String) {
         println(text)
     }
-
 
     @SuppressLint("SetTextI18n")
     override fun dialogResult(value: String) {

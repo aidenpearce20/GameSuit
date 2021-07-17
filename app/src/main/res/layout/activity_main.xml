@@ -99,29 +99,35 @@
 
         <ImageView
             android:id="@+id/imgRock"
+            android:tag="imgRock"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_round"
             android:contentDescription="@string/batu"
+            android:padding="4dp"
             app:srcCompat="@drawable/batu" />
 
         <ImageView
             android:id="@+id/imgPaper"
+            android:tag="imgPaper"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_round"
             android:contentDescription="@string/kertas"
+            android:padding="4dp"
             app:srcCompat="@drawable/kertas" />
 
         <ImageView
             android:id="@+id/imgScissor"
+            android:tag="imgScissor"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_round"
             android:contentDescription="@string/gunting"
+            android:padding="4dp"
             app:srcCompat="@drawable/gunting" />
     </LinearLayout>
 
@@ -171,6 +177,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_round"
             android:contentDescription="@string/batu"
+            android:padding="4dp"
             app:srcCompat="@drawable/batu" />
 
         <ImageView
@@ -180,6 +187,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_round"
             android:contentDescription="@string/kertas"
+            android:padding="4dp"
             app:srcCompat="@drawable/kertas" />
 
         <ImageView
@@ -189,11 +197,13 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_round"
             android:contentDescription="@string/gunting"
+            android:padding="4dp"
             app:srcCompat="@drawable/gunting" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imgRefresh"
+        android:tag="imgRefresh"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="8dp"
