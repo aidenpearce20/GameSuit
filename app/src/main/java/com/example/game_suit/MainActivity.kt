@@ -1,5 +1,6 @@
 package com.example.game_suit
 
+import android.annotation.SuppressLint
 import android.content.res.ColorStateList
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -94,6 +95,7 @@ class MainActivity : AppCompatActivity(), Background, Alerts {
     }
 
 
+    @SuppressLint("SetTextI18n")
     override fun dialogResult(value: String) {
         when (value) {
             "playerOne" -> {
