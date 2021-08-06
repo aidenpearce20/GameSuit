@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingTop="60dp"
@@ -13,7 +14,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hasil Permainan"
+        android:text="@string/hasil_permainan"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -22,11 +23,11 @@
         android:id="@+id/tvDialogResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        android:gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <Button
@@ -35,9 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text="Main Lagi"
-        android:textColor="@color/white"
-        />
+        android:text="@string/main_lagi"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnMenu"
@@ -45,11 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text="Kembali ke Menu"
+        android:text="@string/kembali_ke_menu"
         android:textColor="@color/black"
         app:backgroundTint="#FF9800" />
-
-
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

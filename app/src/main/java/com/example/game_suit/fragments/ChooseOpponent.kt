@@ -42,7 +42,10 @@ class ChooseOpponent(private val fragContainer: Int, private var showSnackbar: B
         snackbar.setAction("Tutup") {
             snackbar.dismiss()
         }
+        snackbar.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
         snackbar.setActionTextColor(ContextCompat.getColorStateList(requireContext(), R.color.snackDismiss))
+        snackbar.setBackgroundTint(R.color.black_80)
+        snackbar.setBackgroundTintList(ContextCompat.getColorStateList(requireContext(), R.color.black_80))
 
         if(showSnackbar) snackbar.show()
 
