@@ -1,4 +1,4 @@
-package com.example.game_suit
+package com.example.game_suit.classes
 
 abstract class CountDown {
 

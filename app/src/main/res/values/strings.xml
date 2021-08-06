@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">Game-Suit</string>
-    <string name="kertas">kertas</string>
-    <string name="gunting">gunting</string>
-    <string name="batu">batu</string>
-    <string name="pemain_1">Pemain 1</string>
+    <string name="Kertas">Kertas</string>
+    <string name="Gunting">Gunting</string>
+    <string name="Batu">Batu</string>
     <string name="com">COM</string>
     <string name="versus">VS</string>
     <string name="refresh">Refresh</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="batur">BatuR</string>
+    <string name="kertasr">KertasR</string>
+    <string name="guntingr">GuntingR</string>
+    <string name="bermain_suit_melawan_n_sesama_pemain">Bermain suit melawan \n sesama pemain.</string>
+    <string name="bermain_suit_melawan_n_komputer">Bermain suit melawan \n komputer.</string>
+    <string name="tuliskan_namamu_dibawah">Tuliskan namamu dibawah</string>
 </resources>
