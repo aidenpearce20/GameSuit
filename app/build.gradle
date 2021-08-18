@@ -13,7 +13,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.game_suit"
+        applicationId "com.blank.game_suit"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1

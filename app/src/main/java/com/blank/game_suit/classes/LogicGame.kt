@@ -1,11 +1,11 @@
-package com.example.game_suit.classes
+package com.blank.game_suit.classes
 
 import android.content.Context
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.game_suit.R
-import com.example.game_suit.interfaces.Alerts
-import com.example.game_suit.interfaces.Background
+import com.blank.game_suit.interfaces.Alerts
+import com.blank.game_suit.interfaces.Background
 
 open class LogicGame(private val background: Background) {
     private var player1: String? = null

@@ -1,4 +1,4 @@
-package com.example.game_suit
+package com.blank.game_suit
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

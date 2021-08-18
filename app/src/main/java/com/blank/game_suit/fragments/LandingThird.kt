@@ -1,4 +1,4 @@
-package com.example.game_suit.fragments
+package com.blank.game_suit.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import com.example.game_suit.R
 
-class LandingThird() : Fragment(R.layout.fragment_landing_third) {
+class LandingThird : Fragment(R.layout.fragment_landing_third) {
 
     private var listener: ((Boolean) -> Unit?)? = null
     private var listenerName: ((String) -> Unit?)? = null
@@ -39,7 +39,7 @@ class LandingThird() : Fragment(R.layout.fragment_landing_third) {
     }
 
     companion object{
-        fun newInstance(listener: ((Boolean) -> Unit), listenerName: ((String) -> Unit)):LandingThird {
+        fun newInstance(listener: ((Boolean) -> Unit), listenerName: ((String) -> Unit)): LandingThird {
             val landingThird = LandingThird()
             landingThird.listener = listener
             landingThird.listenerName = listenerName

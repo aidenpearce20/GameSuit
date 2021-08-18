@@ -1,4 +1,4 @@
-package com.example.game_suit.fragments
+package com.blank.game_suit.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.game_suit.R
-import com.example.game_suit.classes.replaceFragmentFromActivity
-import com.example.game_suit.data.UserData
+import com.blank.game_suit.classes.replaceFragmentFromActivity
+import com.blank.game_suit.data.UserData
 import com.google.android.material.snackbar.Snackbar
 
 class ChooseOpponent(private val fragContainer: Int, private var showSnackbar: Boolean = true) : Fragment(R.layout.fragment_choose_opponent) {

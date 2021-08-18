@@ -1,4 +1,4 @@
-package com.example.game_suit.classes
+package com.blank.game_suit.classes
 
 import android.os.Bundle
 import android.os.Parcelable
@@ -25,4 +25,10 @@ fun replaceFragmentFromActivity(manager: FragmentManager, fragment: Fragment?, f
     transaction.setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out)
     transaction.replace(frameId, fragment)
     transaction.commit()
+}
+
+fun backToPreviousFragment(manager: FragmentManager, fragment: Fragment?, value: Parcelable? = null) {
+    args.putParcelable("key", value)
+    fragment!!.arguments = args
+    manager.popBackStack()
 }

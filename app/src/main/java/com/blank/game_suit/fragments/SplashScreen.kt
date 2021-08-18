@@ -1,4 +1,4 @@
-package com.example.game_suit.fragments
+package com.blank.game_suit.fragments
 
 import android.Manifest
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.game_suit.R
-import com.example.game_suit.classes.replaceFragmentFromActivity
+import com.blank.game_suit.classes.replaceFragmentFromActivity
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse

@@ -1,4 +1,4 @@
-package com.example.game_suit.fragments
+package com.blank.game_suit.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +10,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.game_suit.R
-import com.example.game_suit.classes.replaceFragmentFromActivity
-import com.example.game_suit.data.UserData
+import com.blank.game_suit.classes.replaceFragmentFromActivity
+import com.blank.game_suit.data.UserData
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 /**

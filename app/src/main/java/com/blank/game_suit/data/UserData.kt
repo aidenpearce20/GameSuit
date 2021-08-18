@@ -1,4 +1,4 @@
-package com.example.game_suit.data
+package com.blank.game_suit.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

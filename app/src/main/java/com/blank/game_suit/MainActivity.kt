@@ -1,11 +1,11 @@
-package com.example.game_suit
+package com.blank.game_suit
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.game_suit.classes.addFragmentToActivity
-import com.example.game_suit.fragments.ChooseOpponent
-import com.example.game_suit.fragments.SplashScreen
+import androidx.appcompat.app.AppCompatActivity
+import com.blank.game_suit.classes.addFragmentToActivity
+import com.blank.game_suit.fragments.SplashScreen
+import com.example.game_suit.R
 
 
 class MainActivity : AppCompatActivity() {

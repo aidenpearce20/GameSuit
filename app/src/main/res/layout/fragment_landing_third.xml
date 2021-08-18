@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".fragments.LandingThird">
+    tools:context="com.blank.game_suit.fragments.LandingThird">
 
 
     <ImageView

@@ -1,4 +1,4 @@
-package com.example.game_suit.fragments
+package com.blank.game_suit.fragments
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -13,12 +13,13 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
-import com.example.game_suit.classes.LogicGame
+import com.blank.game_suit.classes.LogicGame
+import com.blank.game_suit.classes.backToPreviousFragment
 import com.example.game_suit.R
-import com.example.game_suit.classes.replaceFragmentFromActivity
-import com.example.game_suit.data.UserData
-import com.example.game_suit.interfaces.Alerts
-import com.example.game_suit.interfaces.Background
+import com.blank.game_suit.classes.replaceFragmentFromActivity
+import com.blank.game_suit.data.UserData
+import com.blank.game_suit.interfaces.Alerts
+import com.blank.game_suit.interfaces.Background
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
@@ -91,7 +92,7 @@ class GameStart(private val fragContainer: Int) : Fragment(R.layout.fragment_gam
         )
 
         bundle = requireArguments()
-        dataUser = bundle.getParcelable<UserData>("key")!!
+        dataUser = bundle.getParcelable("key")!!
         gamePlay = dataUser.choice
         username = dataUser.name
 
@@ -168,10 +169,9 @@ class GameStart(private val fragContainer: Int) : Fragment(R.layout.fragment_gam
         }
 
         closeGame.setOnClickListener {
-            replaceFragmentFromActivity(
+            backToPreviousFragment(
                 parentFragmentManager,
                 ChooseOpponent(fragContainer, false),
-                fragContainer,
                 dataUser
             )
         }

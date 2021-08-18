@@ -1,4 +1,4 @@
-package com.example.game_suit.interfaces
+package com.blank.game_suit.interfaces
 
 interface Alerts {
     fun showAlertMessages(text: String)

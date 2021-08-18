@@ -1,4 +1,4 @@
-package com.example.game_suit.fragments
+package com.blank.game_suit.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import com.example.game_suit.R
 
-class DialogResult() : DialogFragment(R.layout.fragment_dialog_result) {
+class DialogResult : DialogFragment(R.layout.fragment_dialog_result) {
     lateinit var winnerName: String
 
     private lateinit var winner: TextView
@@ -48,7 +48,7 @@ class DialogResult() : DialogFragment(R.layout.fragment_dialog_result) {
     }
 
     companion object{
-        fun newInstance(winnerName:String ,backToMenu: ((Boolean) -> Unit), replayGame: ((Boolean) -> Unit)):DialogResult {
+        fun newInstance(winnerName:String ,backToMenu: ((Boolean) -> Unit), replayGame: ((Boolean) -> Unit)): DialogResult {
             val dialogResult = DialogResult()
             dialogResult.winnerName = winnerName
             dialogResult.backToMenu = backToMenu
